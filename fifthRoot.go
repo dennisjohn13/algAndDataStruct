@@ -1,6 +1,6 @@
 // For any 3 elements a,b and c in an array, if the fifth root of (a - b + c) == 0 and given the value of 'a',
 // can you find the orhter 2 elements
-// https://play.golang.org/p/e6cnpqaIDT
+// https://play.golang.org/p/lCqri29sgY
 package main
 
 import "fmt"
@@ -14,7 +14,7 @@ func main() {
 			continue
 		}
 		for j := 0; j < len(a); j++ {
-			if a[i] < a[j] || a[i] == a[j] || a[j] == givenValue || givenValue != (a[i]-a[j]) {
+			if a[i] == a[j] || a[j] == givenValue || givenValue != (a[i]-a[j]) {
 				continue
 			}
 			fmt.Println("B = ", a[i], ", C = ", a[j])
